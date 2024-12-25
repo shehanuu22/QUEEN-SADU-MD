@@ -35,7 +35,7 @@ const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
 
-const ownerNumber = ['917849917350']
+const ownerNumber = ['94788001464']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -55,7 +55,7 @@ const port = process.env.PORT || 9090;
 //=============================================
 
 async function connectToWA() {
-console.log("CONNECTING TOHID_MD BOT🧬...");
+console.log("CONNECTING QUEEN SADU_MD BOT🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -83,16 +83,16 @@ require("./plugins/" + plugin);
 }
 });
 console.log('PLUGINS FILES INSTALL SUCCESSFULLY ✅')
-console.log('TOHID_MD CONNECTED TO WHATSAPP ENJOY ✅')
+console.log('QUEEN SADU_MD CONNECTED TO WHATSAPP ENJOY ✅')
 
 let up = `
-*[ •  TOHID_MD - STARTED‎ • ]*
+*[ •  QUEEN_SADU_MD - STARTED‎ • ]*
 *╭┈───────────────•*
 *│  ◦* *_Congratulations Your Bot Active Successfully_*
 *│  ◦*
 *│  ◦* *❁ ᴊᴏɪɴ ᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ ❁*
 *│  ◦*
-*│  ◦* *https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T
+*│  ◦* *https://whatsapp.com/channel/0029Vb0Anqe9RZAcEYc2fT2c*
 *│  ◦*
 *│  ◦* *❁ ᴊᴏɪɴ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ ❁*
 *│  ◦*
@@ -100,15 +100,15 @@ let up = `
 *╰┈───────────────•*
 *[ •  B O T  - R E P O ‎ • ]*
 *╭┈───────────────•*
-*│✫➠ - 🌐URL:* *https://github.com/Tohidkhan6332/TOHID_MD*
+*│✫➠ - 🌐URL:* *https://github.com/mrdinesh595*
 *╰┈───────────────•*
 *YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: [${prefix}]*
 
 *•────────────•⟢*
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴛᴏʜɪᴅ ᴋʜᴀɴ
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ qᴜᴇᴇɴ ꜱᴀᴅᴜ
 *•────────────•⟢*
 `;
-conn.sendMessage(conn.user.id, { image: { url: `https://i.imgur.com/M1BzE37.jpeg` }, caption: up })
+conn.sendMessage(conn.user.id, { image: { url: `https://i.postimg.cc/xdMvP3XZ/In-Shot-20241222-002123636.jpg` }, caption: up })
 
 }
 })
@@ -309,7 +309,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("HEY, TOHID_MD STARTED ✅");
+res.send("HEY, qᴜᴇᴇɴ ꜱᴀᴅᴜ MD STARTED ✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
