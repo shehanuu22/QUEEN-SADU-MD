@@ -25,7 +25,7 @@ cmd({
         }
 
         const movieInfo = `
-*🎬 TOHID_MD 🎬*
+*🎬 QUEEN SADU 🎬*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
@@ -41,14 +41,14 @@ cmd({
 *ᴀᴡᴀʀᴅꜱ:* ${data.Awards}
 *ɪᴍᴅʙ ʀᴀᴛɪɴɢ:* ${data.imdbRating}
 
-> POWERED BY TOHID KHAN
+> POWERED BY MR DINESH
 `;
 
         const imageUrl = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
 
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${movieInfo}\n> CREATED BY TOHID KHAN`
+            caption: `${movieInfo}\n> CREATED BY MR DINESH`
         }, { quoted: mek });
     } catch (e) {
         console.error(e);
