@@ -57,3 +57,57 @@ cmd({
         reply("Failed to download the song. Please check the URL and try again.")
     }
 })
+
+
+//====================video_dl=======================
+
+cmd({
+    pattern: "video",
+    desc: "To download videos.",
+    react: "🎥",
+    category: "download",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+if(!q) return reply("Please give me a url or title")  
+const search = await yts(q)
+const data = search.videos[0];
+const url = data.url
+    
+    
+let desc = `
+⫷⦁[ * '-'_꩜ 𝐐𝐔𝐄𝐄𝐍 𝐒𝐀𝐃𝐔 𝙈𝘿 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ꩜_'-' * ]⦁⫸ 
+
+🎥 *Video Found!* 
+
+➥ *Title:* ${data.title} 
+➥ *Duration:* ${data.timestamp} 
+➥ *Views:* ${data.views} 
+➥ *Uploaded On:* ${data.ago} 
+➥ *Link:* ${data.url} 
+
+🎬 *Enjoy the video brought to you by* *𝐐𝐔𝐄𝐄𝐍 𝐒𝐀𝐃𝐔 Bot*! 
+
+> *Created with 💛 by 𝐌𝐑 𝐃𝐈𝐍𝐄𝐒𝐇* 
+
+> *© 𝐐𝐔𝐄𝐄𝐍 𝐒𝐀𝐃𝐔 - MD* 
+*💻 GitHub:* https://github.com/Navinofc44/DARK-ZERO-MD
+`
+
+await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
+
+//download video
+
+let down = await fg.ytv(url)
+let downloadUrl = down.dl_url
+
+//send video message
+await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© QUEEN SADU - MD*"},{quoted:mek})
+
+}catch(e){
+console.log(e)
+  reply('𝚗𝚘𝚝 𝚏𝚘𝚞𝚗𝚍 𝚍𝚘𝚠𝚗𝚕𝚘𝚍')
+}
+})
