@@ -1,4 +1,3 @@
-
 const {cmd , commands} = require('../command')
 const yts = require('yt-search');
 const fg = require('api-dylux');
@@ -51,7 +50,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     case '1':
                         let down = await fg.yta(url);
                         let downloadUrl = down.dl_url;
-                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ*', mimetype: 'audio/mpeg'},{ quoted: mek });
+                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴩᴏᴡʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ*', mimetype: 'audio/mpeg'},{ quoted: mek });
                         break;
                     case '2':               
                         // Send Document File
@@ -129,7 +128,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     case '2':
                         let downviddoc = await fg.ytv(url);
                         let downloadvdocUrl = downviddoc.dl_url;
-                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: mek });
+                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ. ᴅɪɴᴇꜱʜ*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: mek });
                         break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");
