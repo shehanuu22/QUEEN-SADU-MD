@@ -22,6 +22,9 @@ let status = `*╭──────────●●►*
 *_HOSTNAME:➠_* ${os.hostname()}
 
 *_OWNER:➠_* *MR DINESH*
+
+*_channal link »_*https://whatsapp.com/channel/0029Vb0Anqe9RZAcEYc2fT2c*
+
 *╰──────────●●►*
 `
 await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:`${status}`},{quoted:mek})
