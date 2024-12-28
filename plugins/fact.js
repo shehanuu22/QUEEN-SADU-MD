@@ -15,7 +15,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const fact = response.data.text;
 
         const funFact = `
-👾 *TOHID_MD RANDOM FACT* 👾
+👾 *QUEEN SADU RANDOM FACT* 👾
 
 ${fact}
 
@@ -45,7 +45,7 @@ async (conn, mek, m, { from, q, reply }) => {
 😂 *Here's a random joke for you!* 😂
 *${joke.setup}*
 ${joke.punchline} 😄
-> *POWERED BY MR TOHID*
+> *POWERED BY MR DINESH*
 `;
         return reply(jokeMessage);
     } catch (e) {
