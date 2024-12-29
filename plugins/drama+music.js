@@ -17,7 +17,7 @@ const url = data.url
     
     
 let desc = `
-⫷⦁[ *TOHID_MD MUSIC DOWNLOADING* ]⦁⫸
+⫷⦁[ *QUEEN SADU MUSIC DOWNLOADING* ]⦁⫸
 
 🎵 *MUSIC FOUND!* 
 
@@ -29,9 +29,9 @@ let desc = `
 
 🎧 *ENJOY THE MUSIC BROUGHT TO YOU!*
 
-> *TOHID_MD WHATSAPP BOT* 
+> *QUEEN SADU WHATSAPP BOT* 
 
-> *© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴛᴏʜɪᴅ ᴋʜᴀɴ* 
+> *© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ* 
 `
 
 await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
@@ -43,7 +43,7 @@ let downloadUrl = down.dl_url
 
 //send audio message
 await conn.sendMessage(from,{audio: {url:downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴛᴏʜɪᴅ ᴋʜᴀɴ*"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"audio/mpeg",fileName:data.title + ".mp3",caption:"*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ*"},{quoted:mek})
 
 }catch(e){
 console.log(e)
@@ -70,7 +70,7 @@ const url = data.url
     
     
 let desc = `
-⫷⦁[ *•TOHID_MD VIDEO DOWNLOADING* ]⦁⫸ 
+⫷⦁[ *•QUEEN SADU VIDEO DOWNLOADING* ]⦁⫸ 
 
 🎥 *VIDEO FOUND!* 
 
@@ -82,7 +82,7 @@ let desc = `
 
 🎬 *ENJOY THE VIDEO BROUGHT TO YOU!*
 
-> *TOHID_MD WHATSAPP BOT* 
+> *QUEEN SADU WHATSAPP BOT* 
 
 > *© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴛᴏʜɪᴅ ᴋʜᴀɴ*
 `
@@ -96,7 +96,7 @@ let downloadUrl = down.dl_url
 
 //send video message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴛᴏʜɪᴅ ᴋʜᴀɴ*"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ*"},{quoted:mek})
 
 }catch(e){
 console.log(e)
