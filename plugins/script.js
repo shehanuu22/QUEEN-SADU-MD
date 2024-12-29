@@ -13,16 +13,16 @@ try{
 let repo =`
 *╭──────────────●●►*
 > *BOT OWNER:*
-*|* *TOHID KHAN*
+*|* *MR DINESH*
 
 > *TOHID_MD REPO:*
-*|* *https://github.com/Tohidkhan6332/TOHID_MD*
+*|* *https://github.com/mrdinesh595/QUEEN-SADU-MD*
 
 > *SUPPORT CHENNAL:*
-*|* *https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T*
+*|* *https://whatsapp.com/channel/0029Vb0Anqe9RZAcEYc2fT2c*
 *╰──────────────●●►*
 
-> *CREATED BY MR TOHID*
+> *CREATED BY MR DINESH*
 `
 await conn.sendMessage(from, { text: repo ,
   contextInfo: {
@@ -32,14 +32,14 @@ await conn.sendMessage(from, { text: repo ,
     isForwarded: false,
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363232588171807@newsletter',
-      newsletterName: "TOHID KHAN",
+      newsletterName: "QUEEN SADU",
       serverMessageId: 999
     },
 externalAdReply: { 
-title: 'SILENT-SOBX-MD',
+title: 'QUEEN SADU',
 body: `${pushname}`,
 mediaType: 1,
-sourceUrl: "https://github.com/Tohidkhan6332/TOHID_MD" ,
+sourceUrl: "https://github.com/mrdinesh595" ,
 thumbnailUrl: "https://i.imgur.com/M1BzE37.jpeg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
