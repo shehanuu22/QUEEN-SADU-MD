@@ -53,21 +53,20 @@
 
 
 
-DIPLOY HEROKU
+❖ DIPLOY HEROKU ❖
  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new-app?template=https://github.com/Tohidkhan6332/TOHID_MD)
 <b>
-
-
-
-COPY WORKFLOW CODE</b></br>
-```
 
 ❖ DEPLOY_RENDER ❖
 
 <a href='https://dashboard.render.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/RENDER-h?color=maroon&style=for-the-badge&logo=render'/></a></p>
 
 -----------
+
+
+
+COPY WALKFLOWS BOT DIPLOY 
 
 name: Node.js CI
 
