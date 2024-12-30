@@ -1,102 +1,52 @@
-const {cmd , commands} = require('../command')
-const yts = require('yt-search');
-const fg = require('api-dylux');
-const axios = require('axios');
-const { Buffer } = require('buffer');
+const config = require('../config');
+const { cmd } = require('../command');
+const { ytsearch, ytmp3, ytmp4 } = require('@dark-yasiya/yt-dl.js'); // request package.json "@dark-yasiya/yt-dl.js": "latest"
 
-const GOOGLE_API_KEY = 'AIzaSyDebFT-uY_f82_An6bnE9WvVcgVbzwDKgU'; // Replace with your Google API key
-const GOOGLE_CX = '45b94c5cef39940d1'; // Replace with your Google Custom Search Engine ID
 
-// ---------------------- Song Download -----------------------
 cmd({
-    pattern: 'song',
-    desc: 'download songs',
-    react: "🎧",
-    category: 'download',
+    pattern: "song",
+    alias: ["ytmp3","ytsong"],
+    react: "🎶",
+    desc: "Download Youtube song",
+    category: "download",
+    use: '.song < Yt url or Name >',
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
+async(conn, mek, m,{ from, prefix, quoted, q, reply }) => {
+try{
 
-      const snm = [2025];
-        
-        // The quoted message template
-        const qMessage = {
-            key: {
-                fromMe: false,
-                participant: "0@s.whatsapp.net",
-                remoteJid: "status@broadcast"
-            },
-            message: {
-                orderMessage: {
-                    itemCount: snm[Math.floor(Math.random() * snm.length)], // Random selection
-                    status: 1,
-                    surface: 1,
-                    message: `✨ 𝐐𝐮𝐞𝐞𝐧 𝘀𝗮𝗱𝘂 𝗯𝗼𝘁 𝗯𝘆 𝗺𝗿 𝗱𝗶𝗻𝗲𝘀𝗵💗`,
-                    orderTitle: "",
-                    sellerJid: '94704227534@s.whatsapp.net'
-                }
-            }
-        };
-      
-        if (!q) return reply('*Please enter a query or a url !*');
+if(!q) return await reply("Please give me Yt url or Name")
+	
+const yt = await ytsearch(q);
+if(yt.results.length < 1) return reply("Results is not found !")
 
-        const search = await yts(q);
-        const data = search.videos[0];
-        const url = data.url;
+let yts = yt.results[0]  
+const ytdl = await ytmp3(yts.url)
+		
+let ytmsg = `🎶 SONG DOWNLOADER 🎶
 
-        let desc = `*🧚‍♂️⃝ QUEEN SADU MD SONG DOWNLOADER 🩷⃟🧚‍♂️*
 
-*|__________________________*
-*|-ℹ️ 𝗧𝗶𝘁𝗹𝗲 :* ${data.title}
-*|-🕘 𝗧𝗶𝗺𝗲 :* ${data.timestamp}
-*|-📌 𝗔𝗴𝗼 :* ${data.ago}
-*|-📉 𝗩𝗶𝗲𝘄𝘀 :* ${data.views}
-*|-🔗 𝗟𝗶𝗻𝗸 :* ${data.url}
-*|__________________________*
+🎵 *TITLE :* ${yts.title}
+🤵 *AUTHOR :* ${yts.author.name}
+⏱ *RUNTIME :* ${yts.timestamp}
+👀 *VIEWS :* ${yts.views}
+🖇️ *URL :* ${yts.url}
+`
+// SEND DETAILS
+await conn.sendMessage(from, { image: { url: yts.thumbnail || yts.image || '' }, caption: `${ytmsg}`}, { quoted: mek });
 
-*🔢 Reply Below Number :*
+// SEND AUDIO TYPE
+await conn.sendMessage(from, { audio: { url: ytdl.download.url }, mimetype: "audio/mpeg" }, { quoted: mek })
 
-*1 Audio File🎶*
-*2 Document File📁*
+// SEND DOC TYPE
+await conn.sendMessage(from, { document: { url: ytdl.download.url }, mimetype: "audio/mpeg", fileName: ytdl.result.title + '.mp3', caption: `${ytdl.result.title}` }, { quoted: mek })
 
-*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ᴍᴅ 👨‍💻*`;
 
-        const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
-
-        conn.ev.on('messages.upsert', async (msgUpdate) => {
-            const msg = msgUpdate.messages[0];
-            if (!msg.message || !msg.message.extendedTextMessage) return;
-
-            const selectedOption = msg.message.extendedTextMessage.text.trim();
-
-            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
-                switch (selectedOption) {
-                    case '1':
-                        let down = await fg.yta(url);
-                        let downloadUrl = down.dl_url;
-                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ👨‍💻*', mimetype: 'audio/mpeg'},{ quoted: qMessage });
-                        break;
-                    case '2':               
-                        // Send Document File
-                        let downdoc = await fg.yta(url);
-                        let downloaddocUrl = downdoc.dl_url;
-                        await conn.sendMessage(from, { document: { url:downloaddocUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ 👨‍💻*', mimetype: 'audio/mpeg', fileName:data.title + ".mp3"}, { quoted: qMessage });
-                        await conn.sendMessage(from, { react: { text: '✅', key: mek.key } })
-                        break;
-                    default:
-                        reply("Invalid option. Please select a valid option🔴");
-                }
-
-            }
-        });
-
-    } catch (e) {
-        console.error(e);
-        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
-        reply('An error occurred while processing your request.');
-    }
-});
+} catch (e) {
+console.log(e)
+reply(e)
+}}
+)
 
 //==================== Video downloader =========================
 
