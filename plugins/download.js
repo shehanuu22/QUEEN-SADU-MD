@@ -1,1 +1,389 @@
-const _0x44b939=_0x1d40;function _0x2659(){const _0x229444=['sendMessage','audio/mpeg','startsWith','638442IZsGOL','31DGaUjv','audio','twitter','give\x20me\x20fb\x20url','-\x20NO-WATERMARK\x0a\x0a\x20','1055778UhHPuc','tiktok','give\x20me\x20mediafire\x20url','2630MFsfyK','mediafire','log','../config','mimeType','/api/gdrivedl?url=','download\x20gdrive\x20files','-\x20HD\x0a\x0a\x20','3516404cekzzR','https://','-\x20SD\x20\x0a\x0a\x20','../command','22RhqAxt','5ALuGrn','678870MGGbMo','/api/mediafiredl?url=','facebook','4069510MiSWUb','https://api-vishwa.vercel.app/','*⬇ DOWNLOADONG▫▫▫*','name','464472LBYmxu','api','video/mp4','data','download','download\x20mfire\x20files','give\x20me\x20gdrive\x20url','/api/tiktokdl?url=','mfire','/api/fdown?url=','/api/twitterdl?url=','7YVymsn','no_wm','twdl','file_type','give\x20me\x20tiktok\x20url','googlefile','fileName','download\x20tt\x20videos'];_0x2659=function(){return _0x229444;};return _0x2659();}(function(_0x326afa,_0x5588f7){const _0x3d8ec5=_0x1d40,_0x4d992f=_0x326afa();while(!![]){try{const _0x16798c=-parseInt(_0x3d8ec5(0x108))/0x1*(-parseInt(_0x3d8ec5(0x110))/0x2)+parseInt(_0x3d8ec5(0x107))/0x3+parseInt(_0x3d8ec5(0xe4))/0x4+parseInt(_0x3d8ec5(0xe9))/0x5*(parseInt(_0x3d8ec5(0x10d))/0x6)+-parseInt(_0x3d8ec5(0xfc))/0x7*(-parseInt(_0x3d8ec5(0xf1))/0x8)+-parseInt(_0x3d8ec5(0xea))/0x9+-parseInt(_0x3d8ec5(0xed))/0xa*(parseInt(_0x3d8ec5(0xe8))/0xb);if(_0x16798c===_0x5588f7)break;else _0x4d992f['push'](_0x4d992f['shift']());}catch(_0x2854f2){_0x4d992f['push'](_0x4d992f['shift']());}}}(_0x2659,0x748ba));const {fetchJson}=require('../lib/functions'),config=require(_0x44b939(0xdf)),{cmd,commands}=require(_0x44b939(0xe7));let baseUrl;((async()=>{const _0x284e45=_0x44b939;let _0x2a72ca=await fetchJson(_0x284e45(0xee));baseUrl=_0x2a72ca[_0x284e45(0xf2)];})());const yourName='*©ɴᴀᴅᴇᴇɴ-ᴍᴅ ᴍᴀᴅᴇ ʙʏ ɴᴀᴅᴇᴇɴ ᴘᴏᴏʀɴᴀ*';function _0x1d40(_0xb8c453,_0x1b3b34){const _0x265916=_0x2659();return _0x1d40=function(_0x1d4052,_0x1496bb){_0x1d4052=_0x1d4052-0xde;let _0x2e17cc=_0x265916[_0x1d4052];return _0x2e17cc;},_0x1d40(_0xb8c453,_0x1b3b34);}cmd({'pattern':'fb','alias':[_0x44b939(0xec)],'desc':'download\x20fb\x20videos','category':_0x44b939(0xf5),'filename':__filename},async(_0x2f4f23,_0x4b97d0,_0x2718d4,{from:_0x187924,quoted:_0x217b6b,body:_0x3e84ec,isCmd:_0x569b22,command:_0x4b3bc5,args:_0xc11c62,q:_0xc72184,isGroup:_0x3b2f33,sender:_0x176aab,senderNumber:_0x167c7c,botNumber2:_0x35a5ee,botNumber:_0x869b87,pushname:_0x22fc65,isMe:_0x56af32,isOwner:_0x49134a,groupMetadata:_0x49ef41,groupName:_0x2dce05,participants:_0x15c5f6,groupAdmins:_0x102877,isBotAdmins:_0x3e906a,isAdmins:_0x8ecd88,reply:_0xa62406})=>{const _0x2524e2=_0x44b939;try{if(!_0xc72184&&!_0xc72184[_0x2524e2(0x106)](_0x2524e2(0xe5)))return _0xa62406(_0x2524e2(0x10b));let _0x35b0cb=await fetchJson(baseUrl+_0x2524e2(0xfa)+_0xc72184);_0xa62406(_0x2524e2(0xef)),await _0x2f4f23['sendMessage'](_0x187924,{'video':{'url':_0x35b0cb['data']['hd']},'mimetype':_0x2524e2(0xf3),'caption':_0x2524e2(0xe3)+yourName},{'quoted':_0x4b97d0}),await _0x2f4f23[_0x2524e2(0x104)](_0x187924,{'video':{'url':_0x35b0cb[_0x2524e2(0xf4)]['sd']},'mimetype':_0x2524e2(0xf3),'caption':_0x2524e2(0xe6)+yourName},{'quoted':_0x4b97d0});}catch(_0xc35f82){console[_0x2524e2(0xde)](_0xc35f82),_0xa62406(''+_0xc35f82);}}),cmd({'pattern':_0x44b939(0x10e),'alias':['tt'],'desc':_0x44b939(0x103),'category':_0x44b939(0xf5),'filename':__filename},async(_0x5e3dab,_0x3c9df2,_0xb5b3d0,{from:_0x1f07cd,quoted:_0x4223cb,body:_0x3cc115,isCmd:_0x314238,command:_0xe7a72a,args:_0x1df6d9,q:_0x45150b,isGroup:_0x1c154c,sender:_0x4fbd71,senderNumber:_0xa2232,botNumber2:_0x3cc524,botNumber:_0x534afb,pushname:_0x19c6bb,isMe:_0x238e9a,isOwner:_0xba61ae,groupMetadata:_0x5a66ef,groupName:_0x8b62c0,participants:_0x5388a8,groupAdmins:_0x54d47f,isBotAdmins:_0x2a73ab,isAdmins:_0x43ec9a,reply:_0x1befe6})=>{const _0x1568d1=_0x44b939;try{if(!_0x45150b&&!_0x45150b[_0x1568d1(0x106)](_0x1568d1(0xe5)))return _0x1befe6(_0x1568d1(0x100));let _0x623724=await fetchJson(baseUrl+_0x1568d1(0xf8)+_0x45150b);_0x1befe6(_0x1568d1(0xef)),await _0x5e3dab[_0x1568d1(0x104)](_0x1f07cd,{'video':{'url':_0x623724[_0x1568d1(0xf4)][_0x1568d1(0xfd)]},'mimetype':_0x1568d1(0xf3),'caption':_0x1568d1(0x10c)+yourName},{'quoted':_0x3c9df2}),await _0x5e3dab['sendMessage'](_0x1f07cd,{'video':{'url':_0x623724[_0x1568d1(0xf4)]['wm']},'mimetype':'video/mp4','caption':'-\x20WITH-WATERMARK\x20\x0a\x0a\x20'+yourName},{'quoted':_0x3c9df2}),await _0x5e3dab['sendMessage'](_0x1f07cd,{'audio':{'url':_0x623724[_0x1568d1(0xf4)][_0x1568d1(0x109)]},'mimetype':'audio/mpeg'},{'quoted':_0x3c9df2});}catch(_0x5b7dfe){console[_0x1568d1(0xde)](_0x5b7dfe),_0x1befe6(''+_0x5b7dfe);}}),cmd({'pattern':_0x44b939(0x10a),'alias':[_0x44b939(0xfe)],'desc':'download\x20tw\x20videos','category':_0x44b939(0xf5),'filename':__filename},async(_0x319937,_0x5280e5,_0x39d245,{from:_0x48c831,quoted:_0x504952,body:_0x1672e9,isCmd:_0x49747b,command:_0x253af6,args:_0x27ba7f,q:_0x1b97a0,isGroup:_0x33f795,sender:_0x5afa22,senderNumber:_0x5076ef,botNumber2:_0x273c58,botNumber:_0x40304f,pushname:_0x34e5ad,isMe:_0x38d1fe,isOwner:_0x539b31,groupMetadata:_0xe4b742,groupName:_0x2c4b7d,participants:_0x598d31,groupAdmins:_0x36b51d,isBotAdmins:_0xf9abfc,isAdmins:_0x3ea416,reply:_0x222625})=>{const _0x299c90=_0x44b939;try{if(!_0x1b97a0&&!_0x1b97a0[_0x299c90(0x106)](_0x299c90(0xe5)))return _0x222625('give\x20me\x20twitter\x20url');let _0x1e2c54=await fetchJson(baseUrl+_0x299c90(0xfb)+_0x1b97a0);_0x222625(_0x299c90(0xef)),await _0x319937['sendMessage'](_0x48c831,{'video':{'url':_0x1e2c54[_0x299c90(0xf4)][_0x299c90(0xf4)]['HD']},'mimetype':_0x299c90(0xf3),'caption':_0x299c90(0xe3)+yourName},{'quoted':_0x5280e5}),await _0x319937[_0x299c90(0x104)](_0x48c831,{'video':{'url':_0x1e2c54['data'][_0x299c90(0xf4)]['SD']},'mimetype':_0x299c90(0xf3),'caption':_0x299c90(0xe6)+yourName},{'quoted':_0x5280e5}),await _0x319937[_0x299c90(0x104)](_0x48c831,{'audio':{'url':_0x1e2c54[_0x299c90(0xf4)]['data']['audio']},'mimetype':_0x299c90(0x105)},{'quoted':_0x5280e5});}catch(_0x1d66eb){console[_0x299c90(0xde)](_0x1d66eb),_0x222625(''+_0x1d66eb);}}),cmd({'pattern':'gfile','alias':[_0x44b939(0x101)],'desc':_0x44b939(0xe2),'category':'download','filename':__filename},async(_0x4d2d8f,_0x4694fd,_0x120590,{from:_0x1a52c4,quoted:_0x3cb555,body:_0x30054b,isCmd:_0x2a57bd,command:_0x43bc11,args:_0x3cba27,q:_0x110ce5,isGroup:_0x23b5f9,sender:_0x1cc272,senderNumber:_0x542134,botNumber2:_0x21a16b,botNumber:_0x2875fd,pushname:_0x4cd2e2,isMe:_0x35ccb8,isOwner:_0x551bad,groupMetadata:_0x161c69,groupName:_0x4f5172,participants:_0x463267,groupAdmins:_0x6ac24,isBotAdmins:_0x23399d,isAdmins:_0x5c1025,reply:_0x51fe7d})=>{const _0x3bf888=_0x44b939;try{if(!_0x110ce5&&!_0x110ce5[_0x3bf888(0x106)](_0x3bf888(0xe5)))return _0x51fe7d(_0x3bf888(0xf7));let _0x81e224=await fetchJson(baseUrl+_0x3bf888(0xe1)+_0x110ce5);_0x51fe7d(_0x3bf888(0xef)),await _0x4d2d8f[_0x3bf888(0x104)](_0x1a52c4,{'document':{'url':_0x81e224[_0x3bf888(0xf4)]['download']},'fileName':_0x81e224[_0x3bf888(0xf4)][_0x3bf888(0x102)],'mimetype':_0x81e224['data'][_0x3bf888(0xe0)],'caption':_0x81e224[_0x3bf888(0xf4)][_0x3bf888(0x102)]+'\x0a\x0a'+yourName},{'quoted':_0x4694fd});}catch(_0xde0dec){console[_0x3bf888(0xde)](_0xde0dec),_0x51fe7d(''+_0xde0dec);}}),cmd({'pattern':_0x44b939(0x111),'alias':[_0x44b939(0xf9)],'desc':_0x44b939(0xf6),'category':_0x44b939(0xf5),'filename':__filename},async(_0x2848c4,_0x45aee0,_0x2b7597,{from:_0x296059,quoted:_0xf078a8,body:_0x4f7381,isCmd:_0x289257,command:_0x4496fd,args:_0x4fbd78,q:_0x52f96a,isGroup:_0x5ca3da,sender:_0x587c1e,senderNumber:_0x39a5db,botNumber2:_0xfe8215,botNumber:_0x7aa2e9,pushname:_0x55c17b,isMe:_0x3898f3,isOwner:_0x1b5fec,groupMetadata:_0x3ff4cc,groupName:_0x5d3153,participants:_0x25a06f,groupAdmins:_0x70d54c,isBotAdmins:_0x510a30,isAdmins:_0x4facb2,reply:_0x1483d8})=>{const _0x2fe4e1=_0x44b939;try{if(!_0x52f96a&&!_0x52f96a[_0x2fe4e1(0x106)](_0x2fe4e1(0xe5)))return _0x1483d8(_0x2fe4e1(0x10f));let _0x1a1aad=await fetchJson(baseUrl+_0x2fe4e1(0xeb)+_0x52f96a);_0x1483d8(_0x2fe4e1(0xef)),await _0x2848c4['sendMessage'](_0x296059,{'document':{'url':_0x1a1aad['data']['link_1']},'fileName':_0x1a1aad['data'][_0x2fe4e1(0xf0)],'mimetype':_0x1a1aad[_0x2fe4e1(0xf4)][_0x2fe4e1(0xff)],'caption':_0x1a1aad[_0x2fe4e1(0xf4)]['name']+'\x0a\x0a'+yourName},{'quoted':_0x45aee0});}catch(_0x5da042){console['log'](_0x5da042),_0x1483d8(''+_0x5da042);}});
+const {cmd , commands} = require('../command')
+const yts = require('yt-search');
+const fg = require('api-dylux');
+const axios = require('axios');
+const { Buffer } = require('buffer');
+
+const GOOGLE_API_KEY = 'AIzaSyDebFT-uY_f82_An6bnE9WvVcgVbzwDKgU'; // Replace with your Google API key
+const GOOGLE_CX = '45b94c5cef39940d1'; // Replace with your Google Custom Search Engine ID
+
+// ---------------------- Song Download -----------------------
+cmd({
+    pattern: 'song',
+    desc: 'download songs',
+    react: "🎧",
+    category: 'download',
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+
+      const snm = [2025];
+        
+        // The quoted message template
+        const qMessage = {
+            key: {
+                fromMe: false,
+                participant: "0@s.whatsapp.net",
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                orderMessage: {
+                    itemCount: snm[Math.floor(Math.random() * snm.length)], // Random selection
+                    status: 1,
+                    surface: 1,
+                    message: `✨ 𝐐𝐮𝐞𝐞𝐧 𝘀𝗮𝗱𝘂 𝗯𝗼𝘁 𝗯𝘆 𝗺𝗿 𝗱𝗶𝗻𝗲𝘀𝗵💗`,
+                    orderTitle: "",
+                    sellerJid: '94704227534@s.whatsapp.net'
+                }
+            }
+        };
+      
+        if (!q) return reply('*Please enter a query or a url !*');
+
+        const search = await yts(q);
+        const data = search.videos[0];
+        const url = data.url;
+
+        let desc = `*🧚‍♂️⃝ QUEEN SADU MD SONG DOWNLOADER 🩷⃟🧚‍♂️*
+
+*|__________________________*
+*|-ℹ️ 𝗧𝗶𝘁𝗹𝗲 :* ${data.title}
+*|-🕘 𝗧𝗶𝗺𝗲 :* ${data.timestamp}
+*|-📌 𝗔𝗴𝗼 :* ${data.ago}
+*|-📉 𝗩𝗶𝗲𝘄𝘀 :* ${data.views}
+*|-🔗 𝗟𝗶𝗻𝗸 :* ${data.url}
+*|__________________________*
+
+*🔢 Reply Below Number :*
+
+*1 Audio File🎶*
+*2 Document File📁*
+
+*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ᴍᴅ 👨‍💻*`;
+
+        const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
+
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1':
+                        let down = await fg.yta(url);
+                        let downloadUrl = down.dl_url;
+                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ👨‍💻*', mimetype: 'audio/mpeg'},{ quoted: qMessage });
+                        break;
+                    case '2':               
+                        // Send Document File
+                        let downdoc = await fg.yta(url);
+                        let downloaddocUrl = downdoc.dl_url;
+                        await conn.sendMessage(from, { document: { url:downloaddocUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ 👨‍💻*', mimetype: 'audio/mpeg', fileName:data.title + ".mp3"}, { quoted: qMessage });
+                        await conn.sendMessage(from, { react: { text: '✅', key: mek.key } })
+                        break;
+                    default:
+                        reply("Invalid option. Please select a valid option🔴");
+                }
+
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+        reply('An error occurred while processing your request.');
+    }
+});
+
+//==================== Video downloader =========================
+
+cmd({
+    pattern: 'video',
+    desc: 'download videos',
+    react: "🎬",
+    category: 'download',
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        const snm = [2025];
+        
+        // The quoted message template
+        const qMessage = {
+            key: {
+                fromMe: false,
+                participant: "0@s.whatsapp.net",
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                orderMessage: {
+                    itemCount: snm[Math.floor(Math.random() * snm.length)], // Random selection
+                    status: 1,
+                    surface: 1,
+                    message: `✨ 𝗾𝘂𝗲𝗲𝗻 𝘀𝗮𝗱𝘂 𝗯𝘆 𝗺𝗿 𝗱𝗶𝗻𝗲𝘀𝗵💗`,
+                    orderTitle: "",
+                    sellerJid: '94704227534@s.whatsapp.net'
+                }
+            }
+        };
+        
+        if (!q) return reply('*Please enter a query or a url !*');
+
+        const search = await yts(q);
+        const data = search.videos[0];
+        const url = data.url;
+
+        let desc = `*🧚‍♂️⃝ QUEEN SADU VIDEO DOWNLOADER 🩷⃟🧚‍♂️*
+*|__________________________*
+*|-ℹ️ 𝗧𝗶𝘁𝗹𝗲 :* ${data.title}
+*|-🕘 𝗧𝗶𝗺𝗲 :* ${data.timestamp}
+*|-📌 𝗔𝗴𝗼 :* ${data.ago}
+*|-📉 𝗩𝗶𝗲𝘄𝘀 :* ${data.views}
+*|-🔗 𝗟𝗶𝗻𝗸 :* ${data.url}
+*|__________________________*
+
+*🔢 Reply Below Number :*
+
+*1 Video File🎬*
+*2 Document File📁*
+
+*🔢 Reply Below Number :*
+
+*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ 👨‍💻*`;
+
+        const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
+
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1':
+                        let downvid = await fg.ytv(url);
+                        let downloadvUrl = downvid.dl_url;
+                        await conn.sendMessage(from, { video : { url:downloadvUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ 👨‍💻*', mimetype: 'video/mp4'},{ quoted: qMessage });
+                        break;
+                    case '2':
+                        let downviddoc = await fg.ytv(url);
+                        let downloadvdocUrl = downviddoc.dl_url;
+                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '*👨‍💻 Qᴜᴇᴇɴ ꜱᴀᴅᴜ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ👨‍💻*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: qMessage });
+                        break;
+                    default:
+                        reply("Invalid option. Please select a valid option🔴");
+                }
+
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+        reply('An error occurred while processing your request.');
+    }
+});
+
+
+//===================== img downloader ========================
+
+cmd({
+    pattern: "img",
+    desc: "Search and send images from Google.",
+    react: "🖼️",
+    category: "download",
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        const snm = [2025];
+        
+        // The quoted message template
+        const qMessage = {
+            key: {
+                fromMe: false,
+                participant: "0@s.whatsapp.net",
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                orderMessage: {
+                    itemCount: snm[Math.floor(Math.random() * snm.length)], // Random selection
+                    status: 1,
+                    surface: 1,
+                    message: `✨ 𝐐𝐮𝐞𝐞𝐧 𝐬𝐚𝐝𝐮 𝐛𝐲 𝐦𝐫 𝐝𝐢𝐧𝐞𝐬𝐡 💗`,
+                    orderTitle: "",
+                    sellerJid: '94704227534@s.whatsapp.net'
+                }
+            }
+        };
+        
+        if (!q) return reply("Please provide a search query for the image.");
+
+        // Fetch image URLs from Google Custom Search API
+        const searchQuery = encodeURIComponent(q);
+        const url = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}&cx=${GOOGLE_CX}&key=${GOOGLE_API_KEY}&searchType=image&num=5`;
+        
+        const response = await axios.get(url);
+        const data = response.data;
+
+        if (!data.items || data.items.length === 0) {
+            return reply("No images found for your query.");
+        }
+
+        // Send images
+        for (let i = 0; i < data.items.length; i++) {
+            const imageUrl = data.items[i].link;
+
+            // Download the image
+            const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+            const buffer = Buffer.from(imageResponse.data, 'binary');
+
+            // Send the image with a footer
+            await conn.sendMessage(from, {
+                image: buffer,
+                caption: `
+🌟 *Image ${i + 1} from your search!* 🌟
+        *Enjoy these images! 📸*
+
+*👨‍💻 Qᴜᴇᴇɴ 𝚜𝚊𝚍𝚞 𝚋𝚢 𝚖𝚛 𝚍𝚒𝚗𝚎𝚜𝚑👨‍💻*
+`
+}, { quoted: qMessage });
+}
+
+    } catch (e) {
+        console.error(e);
+        reply(`Error: ${e.message}`);
+    }
+});
+
+//======================= fb downloader ===================================================================
+
+const { fetchJson } = require('../lib/functions')
+const config = require('../config')
+
+// FETCH API URL
+let baseUrl;
+(async () => {
+    let baseUrlGet = await fetchJson(`https://raw.githubusercontent.com/prabathLK/PUBLIC-URL-HOST-DB/main/public/url.json`)
+    baseUrl = baseUrlGet.api
+})();
+//fb downloader
+cmd({
+    pattern: "fb",
+    desc: "Download fb videos",
+    category: "download",
+    react: "#️⃣",
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        if (!q || !q.startsWith("https://")) return reply("Please provide a valid Facebook video URL!");
+        const data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`);
+        let desc = ` *🧚‍♂️ QUEEN 𝚂𝙰𝙳𝚄 FB DOWNLOADER 🧚‍♂️*
+
+*🔢 Reply Below Number :*
+
+*1 Download HD Quality*
+*2 Download SD Quality*
+
+*👨‍💻 Qᴜᴇᴇɴ 𝚜𝚊𝚍𝚞 𝚋𝚢 𝚖𝚛 𝚍𝚒𝚗𝚎𝚜𝚑 👨‍💻*`;
+
+        const vv = await conn.sendMessage(from, { image: { url:"https://i.postimg.cc/xdMvP3XZ/In-Shot-20241222-002123636.jpg"}, caption: desc }, { quoted: mek });
+        
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1':
+                        await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: "*👨‍💻 Qᴜᴇᴇɴ 𝚜𝚊𝚍𝚞 𝚋𝚢 𝚖𝚛 𝚍𝚒𝚗𝚎𝚜𝚑 👨‍💻*" }, { quoted: mek });
+                        break;
+                    case '2':               
+                    await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: "" }, { quoted: mek });
+                        break;
+                    default:
+                        reply("Invalid option. Please select a valid option🔴");
+                }
+
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+        reply('An error occurred while processing your request.');
+    }
+});
+
+//=========================== apk downloader ==============================
+
+cmd({
+    pattern: "apk",
+    react: '📦',
+    desc: "Download apk.",
+    category: "download",
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+try {
+    const snm = [2025];
+        
+        // The quoted message template
+        const qMessage = {
+            key: {
+                fromMe: false,
+                participant: "0@s.whatsapp.net",
+                remoteJid: "status@broadcast"
+            },
+            message: {
+                orderMessage: {
+                    itemCount: snm[Math.floor(Math.random() * snm.length)], // Random selection
+                    status: 1,
+                    surface: 1,
+                    message: `✨ Qᴜᴇᴇɴ 𝚜𝚊𝚍𝚞 𝚋𝚢 𝚖𝚛 𝚍𝚒𝚗𝚎𝚜𝚑 💗`,
+                    orderTitle: "",
+                    sellerJid: '94704227534@s.whatsapp.net'
+                }
+            }
+        };
+
+await m.react("🔄")
+      
+const apiUrl = `http://ws75.aptoide.com/api/7/apps/search/query=${q}/limit=1`;
+const response = await axios.get(apiUrl);
+const data = response.data;
+
+let step1 = data.datalist.list[0].size % 1000000
+let step2 = `.` + step1
+let step3 = data.datalist.list[0].size / 1000000
+let correctsize = step3 - step2
+    
+let desc = `
+*🧚‍♂️⃝ QUEEN SADU MD APK DOWNLOADER 🩷⃟🧚‍♂️*
+*╭──📦 APK Details 📦──◦•◦►•*
+*╎*
+*╎* *🏷️ Nᴀᴍᴇ :* ${data.datalist.list[0].name}
+*╎* *📦 Sɪᴢᴇ :* ${correctsize}MB
+*╎* *🔖 Pᴀᴄᴋᴀɢᴇ :* ${data.datalist.list[0].package}
+*╎* *📆 Lᴀꜱᴛ Uᴘᴅᴀᴛᴇ :* ${data.datalist.list[0].updated}
+*╎* *👤 Dᴇᴠᴇʟᴏᴘᴇʀꜱ :* ${data.datalist.list[0].developer.name}
+*╎*
+*╰───────────────◦•◦►•*\n\n\*👨‍💻 Qᴜᴇᴇɴ 𝚜𝚊𝚍𝚞 𝚋𝚢 𝚖𝚛 𝚍𝚒𝚗𝚎𝚜𝚑 👨‍💻*`
+
+await conn.sendMessage(from,{image: {url: data.datalist.list[0].icon},caption: desc},{quoted: mek})
+await conn.sendMessage(from,{document: {url: data.datalist.list[0].file.path_alt},fileName: data.datalist.list[0].name,mimetype: 'application/vnd.android.package-archive',caption: `*👨‍💻 Qᴜᴇᴇɴ Sadu by mr dinesh 👨‍💻*`},{ quoted: qMessage });
+        
+await m.react("✅")
+
+}catch(e){
+console.log(e)
+reply(`${e}`)
+}
+})
