@@ -1,67 +1,44 @@
-import fetch from 'node-fetch'
-import ffmpeg from "fluent-ffmpeg"
+import nessid from "neastooapi";
 
-var handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) {
-        throw `*[❗] Example: ${usedPrefix + command
-        } https://www.tiktok.com/@tuanliebert/video/7313159590349212934?is_from_webapp=1&sender_device=pc`;
+export const cmd = {
+  name: ["tiktok"],
+  command: ["tiktok", "tt"],
+  category: ["download"],
+  detail: {
+    desc: "Unduh video dari TikTok menggunakan tautan",
+    use: "Link TikTok",
+  },
+  async start({ m, text, conn }) {
+    if (!text) {
+      return m.reply(
+        `Masukkan link TikTok untuk mengunduh video.\nContoh: !tiktok https://vt.tiktok.com/example/`
+      );
     }
 
     try {
-        await conn.reply ( m.chat, "Tunggu sebentar kak, video sedang di download...", m, );
+      // Panggil API TikTokDL menggunakan nessid
+      const response = await nessid.TiktokDL(text);
 
-        const tiktokData = await tiktokdl(args[0]);
+      // Validasi jika respons gagal
+      if (response.status !== "success" || !response.result || !response.result.video) {
+        return m.reply(`Gagal memproses tautan TikTok. Pesan: ${response.result?.desc || 'Tautan tidak valid'}`);
+      }
 
-        if (!tiktokData) {
-            throw "Gagal mendownload video!";
-        }
+      // Ambil bagian video URL dan deskripsi
+      const { video, desc, author } = response.result;
 
-        const videoURL = tiktokData.data.play;
-        const videoURLWatermark = tiktokData.data.wmplay;
-        const infonya_gan = `Judul: ${tiktokData.data.title}\nUpload: ${tiktokData.data.create_time
-            }\n\nSTATUS:\n=====================\nLike = ${tiktokData.data.digg_count
-            }\nKomen = ${tiktokData.data.comment_count}\nShare = ${tiktokData.data.share_count
-            }\nViews = ${tiktokData.data.play_count}\nSimpan = ${tiktokData.data.download_count
-            }\n=====================\n\nUploader: ${tiktokData.data.author.nickname || "Tidak ada informasi penulis"
-            }\n(${tiktokData.data.author.unique_id} - https://www.tiktok.com/@${tiktokData.data.author.unique_id
-            } )\nSound: ${tiktokData.data.music
-            }\n`;
-
-        if (videoURL || videoURLWatermark) {
-            await conn.sendFile( m.chat, videoURL, "tiktok.mp4", `Ini kak videonya\n\n${infonya_gan}`, m, );
-            setTimeout(async () => {
-                //await conn.sendFile( m.chat, videoURLWatermark, "tiktokwm.mp4", `*Ini Versi Watermark*\n\n${infonya_gan}`, m, );
-                await conn.sendFile( m.chat, `${tiktokData.data.music}`, "lagutt.mp3", "ini lagunya", m, );
-                //conn.reply( m.chat, "•⩊• Ini kak Videonya ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა\nDitonton yah ₍^ >ヮ<^₎", m, );
-            }, 1500);
-        } else {
-            throw "Tidak ada tautan video yang tersedia.";
-        }
-    } catch (error1) {
-        conn.reply(m.chat, `Error: ${error1}`, m);
+      // Kirim video dengan caption deskripsi
+      await conn.sendMessage(
+        m.from,
+        {
+          video: { url: video },
+          caption: `🎥 Deskripsi: ${desc || "Tanpa deskripsi"}\n📹 Oleh: ${author?.nickname || "Anonim"}`,
+        },
+        { quoted: m }
+      );
+    } catch (error) {
+      console.error("Error API:", error);
+      m.reply("Terjadi kesalahan saat memproses permintaan.");
     }
+  },
 };
-
-handler.menudownload = ['tiktok'].map((v) => v + ' <url>')
-handler.tagsdownload = ['search']
-handler.command = /^t(t|iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
-
-handler.limit = true
-
-export default handler
-
-async function tiktokdl(url) {
-    let tikwm = `https://www.tikwm.com/api/?url=${url}?hd=1`
-    let response = await (await fetch(tikwm)).json()
-    return response
-}
-
-async function convertVideoToMp3(videoUrl, outputFileName) {
-    return new Promise((resolve, reject) => {
-        ffmpeg(videoUrl)
-            .toFormat("mp3")
-            .on("end", () => resolve())
-            .on("error", (err) => reject(err))
-            .save(outputFileName);
-    });
-                                                    }
