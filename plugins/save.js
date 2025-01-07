@@ -1,4 +1,4 @@
-//CODING BY TOHID KHAN ❤️‍🩹🫅🏻
+//CODING BY NOTNING ❤️‍🩹🫅🏻
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const fs = require('fs');
