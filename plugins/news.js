@@ -1,44 +1,260 @@
-const config = require('../config');
-const { cmd } = require('../command');
-const axios = require('axios');
 
-// API LINK
-const apilink = 'https://dizer-adaderana-news-api.vercel.app/news'; 
+/*
+
+$$$$$$\            $$\                                               
+$$  __$$\           $$ |                                              
+$$ /  \__|$$\   $$\ $$$$$$$\  $$$$$$$$\  $$$$$$\   $$$$$$\   $$$$$$\  
+\$$$$$$\  $$ |  $$ |$$  __$$\ \____$$  |$$  __$$\ $$  __$$\ $$  __$$\ 
+ \____$$\ $$ |  $$ |$$ |  $$ |  $$$$ _/ $$$$$$$$ |$$ |  \__|$$ /  $$ |
+$$\   $$ |$$ |  $$ |$$ |  $$ | $$  _/   $$   ____|$$ |      $$ |  $$ |
+\$$$$$$  |\$$$$$$  |$$$$$$$  |$$$$$$$$\ \$$$$$$$\ $$ |      \$$$$$$  |
+ \______/  \______/ \_______/ \________| \_______|\__|       \______/
+
+Project Name : SubZero MD
+Creator      : Darrell Mucheri ( Mr Frank OFC )
+Repo         : https//github.com/mrfrank-ofc/SUBZERO-MD
+Support      : wa.me/18062212660
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const axios = require('axios');
+const { cmd } = require('../command');
 
 cmd({
-    pattern: "derananews",
-    alias: ["derana", "news3"],
-    react: "📑",
-    desc: "",
+    pattern: "news",
+    desc: "Get the latest news headlines.",
     category: "news",
-    use: '.derana',
+    react: "📰",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        // Fetch news data from the API
-        const response = await axios.get(apilink);
-        const news = response.data[0]; // Access the first item of the array
+        const apiKey="0f2c43ab11324578a7b1709651736382";
+        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
+        const articles = response.data.articles;
 
-        // Construct the message
-        const msg = `
-           📑 *DERANA NEWS* 📑
+        if (!articles.length) return reply("No news articles found.");
 
-• *Title* - ${news.title || 'Not available'}
-• *News* - ${news.description || 'Not available'}
-• *Date* - ${news.time || 'Not available'}
-• *Link* - ${news.new_url || 'Not available'}
+        // Send each article as a separate message with image and title
+        for (let i = 0; i < Math.min(articles.length, 5); i++) {
+            const article = articles[i];
+            let message = `
+📰 *${article.title}*
+⚠️ _${article.description}_
+🔗 _${article.url}_
 
-⚡ *Powered By ${news.powered_by || 'Unknown'}*
-        `;
+  © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ
+            `;
 
-        // Send the news as a message
-        await conn.sendMessage(from, { 
-            image: { url: news.image || '' }, 
-            caption: msg 
-        }, { quoted: mek });
+            console.log('Article URL:', article.urlToImage); // Log image URL for debugging
+
+            if (article.urlToImage) {
+                // Send image with caption
+                await conn.sendMessage(from, { image: { url: article.urlToImage }, caption: message });
+            } else {
+                // Send text message if no image is available
+                await conn.sendMessage(from, { text: message });
+            }
+        };
     } catch (e) {
-        console.error(e);
-        reply('⚠️ දෝෂයක් සිදු විය. API එකෙන් දත්ත ලබා ගැනීමට නොහැකි විය!');
+        console.error("Error fetching news:", e);
+        reply("Could not fetch news. Please try again later.");
     }
 });
