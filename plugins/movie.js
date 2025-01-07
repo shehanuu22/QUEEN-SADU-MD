@@ -25,7 +25,7 @@ cmd({
         }
 
         const movieInfo = `
-*🎬 QUEEN SADU 🎬*
+*🎬 QUEEN SADU_MD 🎬*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
