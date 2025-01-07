@@ -4,15 +4,15 @@ const { fetchJson } = require('../lib/functions')
 
 cmd({
     pattern: "ai",
-    alias: ["gpt","bot"], 
-    react: "📑",
+    alias: ["gpt","subzero"], 
+    react: "🧠",
     desc: "ai chat.",
     category: "main",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let data = await fetchJson(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${q}`)
+let data = await fetchJson(`https://api.davidcyriltech.my.id/ai/chatbot?query=${q}`)
 return reply(`${data.data}`)
 }catch(e){
 console.log(e)
