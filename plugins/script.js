@@ -40,7 +40,7 @@ title: 'QUEEN SADU',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://github.com/mrdinesh595" ,
-thumbnailUrl: "https://i.imgur.com/M1BzE37.jpeg" ,
+thumbnailUrl: "https://i.postimg.cc/C5YSXhHr/20241225-020201.jpg)" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }
