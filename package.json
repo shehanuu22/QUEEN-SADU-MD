@@ -1,4 +1,4 @@
-{
+hu{
   "name": "TOHID_MD",
   "version": "1.0.0",
   "description": "A WhatsApp bot created using Node.js",
@@ -120,7 +120,7 @@
         "@mrnima/tiktok-downloader":"1.0.0",
         "@mrnima/facebook-downloader":"1.0.0",
         "mrnima-moviedl":"1.0.0",
-        "@dark-yasiya/yt-dl.js": "latest",
+        "@dark-yasiya/yt-dl.js": "latest"
         
     }
 }
