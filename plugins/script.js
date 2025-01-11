@@ -15,11 +15,14 @@ let repo =`
 > *BOT OWNER:*
 *|* *MR DINESH*
 
-> *TOHID_MD REPO:*
+> *QUEEN SADU_MD REPO:*
 *|* *https://github.com/mrdinesh595/QUEEN-SADU-MD*
 
 > *SUPPORT CHENNAL:*
 *|* *https://whatsapp.com/channel/0029Vb0Anqe9RZAcEYc2fT2c*
+> * *SYSTEM SETTING:*
+*|* *ᴍʀ ʟᴀᴋꜱʜᴀɴ*
+*|* *94786528867*
 *╰──────────────●●►*
 
 > *CREATED BY MR DINESH*
