@@ -31,7 +31,7 @@
   "hello":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
   "laki":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
   "senu":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
-  "ලකී":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
+  "ලකී":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/sc.mp3",
   "help":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
   "me":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
   "ai":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/hello.mp3",
@@ -49,7 +49,10 @@
  "මට බෑ":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/jaale.mp3",
   ".<":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/main.mp3",
   ">.":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/main.mp3",
-  ".start":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/main.mp3"
+  ".start":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/main.mp3",
+  ".sc":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/sc.mp3",
+  ".script":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/sc.mp3",
+  ".update":"https://github.com/mrdinesh595/Mssadu/raw/refs/heads/main/database/sc.mp3"
   }
   
   
