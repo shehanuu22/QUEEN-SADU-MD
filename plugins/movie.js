@@ -4,7 +4,7 @@ const config = require('../config'); // Ensure your API key is in config
 
 // Command to fetch movie details
 cmd({
-    pattern: "movieinfo",
+    pattern: "movie",
     desc: "Fetch detailed information about a movie.",
     category: "utility",
     react: "🎞️",
@@ -25,7 +25,7 @@ cmd({
         }
 
         const movieInfo = `
-*🎬 QUEEN SADU_MD 🎬*
+*🎬 QUEEN SADU MD 🎬*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}
@@ -40,15 +40,13 @@ cmd({
 *ᴄᴏᴜɴᴛʀʏ:* ${data.Country}
 *ᴀᴡᴀʀᴅꜱ:* ${data.Awards}
 *ɪᴍᴅʙ ʀᴀᴛɪɴɢ:* ${data.imdbRating}
-
-> POWERED BY MR DINESH
 `;
 
         const imageUrl = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
 
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${movieInfo}\n> CREATED BY MR DINESH`
+            caption: `${movieInfo}\n> UMAR`
         }, { quoted: mek });
     } catch (e) {
         console.error(e);
