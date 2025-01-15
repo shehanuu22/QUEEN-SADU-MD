@@ -17,12 +17,6 @@
 <div align="center" class= "main"> 
   <img src="https://i.ibb.co/h8fkrRF/In-Shot-20241129-183242921.jpg"width="300" height="300"/>
 
-<div align="center" class= "main"> 
-  <img src="https://files.catbox.moe/gxv86n.mp4"width="300" height="300"/>
-
-
-
-https://files.catbox.moe/gxv86n.mp4
 
 <p> <b>Connect With me:</b></p>
 <p>
