@@ -1,98 +1,94 @@
 const {cmd , commands} = require('../command')
-const fg = require('api-dylux')
-const yts = require('yt-search')
-
+const fetch = require('node-fetch')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
+const axios = require('axios');
+const yts = require("yt-search")
+const API = `https://manu-ofc-api-site-6bfcbe0e18f6.herokuapp.com/ytmp3-dl-fixed?url=` // මට මැසේජ් එකක් දාල ඉල්ලගන්න...😎❤️ ( +94 74 227 4855 )
 cmd({
-    pattern: "play4",
-    alias: ["ytmp3","audio3"],
-    desc: "download songs",
-    category: "download",
-    react: "🎵",
+    pattern: "song",
+    alias: ["audio"],
+    desc: 'Download Song / Video',
+    use: '.play Title',
+    react: "🎧",
+    category: 'download',
     filename: __filename
 },
-async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if(!q) return reply("*Please provide a link or a name 🔎...*")
-const search = await yts(q)
-const data = search.videos[0]
-const url = data.url
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+      
+        
+        if (!q) return reply('Please provide a title.');
 
-let desc = `╭━━━〔 *QUEEN-SADU-MD* 〕━━━┈⊷
-┃▸╭───────────
-┃▸┃๏ *MUSIC DOWNLOADER*
-┃▸└───────────···๏
-╰────────────────┈⊷
-╭━❮ *Download Audio* ❯━┈⊷
-┃▸╭─────────────·๏
-┃▸┃๏ *Tital* - ${data.title}
-┃▸┃๏ *Views* - ${data.views}
-┃▸┃๏ *Description* - ${data.description}
-┃▸┃๏ *Duration:* ${data.timestamp}}
-┃▸┃๏ *Link* - ${data.url}
-┃▸┃๏ *Ago* - ${data.ago}
-┃▸└────────────┈⊷
-╰━━━━━━━━━━━━━━━⪼
-> *© ᴩᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ ♡*`
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:desc},{quoted:mek});
+        const search = await yts(q);
+        const data = search.videos[0];
+        const url = data.url;
 
-//download audio
+        let desc = `*💚🎵 𝐘𝐓 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑 🎵💚*
+      
+> *\`➤ Title\` :* ${data.title}
 
-let down = await fg.yta(url)  
-let downloadUrl = down.dl_url
+> *\`➤ Views\` :* ${data.views}
 
-//send audio
-await conn.sendMessage(from,{audio:{url: downloadUrl},mimetype:"audio/mpeg"},{quoted:mek})
-await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"audio/mpeg",fileName:data.title + "mp3",caption:"©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ"},{quoted:mek})
-}catch(e){
-reply(`${e}`)
-}
-})
+> *\`➤ DESCRIPTION\`:* ${data.description}
 
-//===========darama-dl===========
+> *\`➤ TIME\`:* ${data.timestamp}
 
-cmd({
-    pattern: "darama",
-    alias: ["video4","ytmp4"],    
-    desc: "download video",
-    category: "download",
-    react: "🎥",
-    filename: __filename
-},
-async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if(!q) return reply("*Please provide a link or a name 🔎...*")
-const search = await yts(q)
-const data = search.videos[0]
-const url = data.url
+> *\`➤ AGO\`:* ${data.ago}
 
-let des = `╭━━━〔 *QUEEN-SADU-MD* 〕━━━┈⊷
-┃▸╭───────────
-┃▸┃๏ *VIDEO DOWNLOADER*
-┃▸└───────────···๏
-╰────────────────┈⊷
-╭━❮ *Download Audio* ❯━┈⊷
-┃▸╭─────────────·๏
-┃▸┃๏ *Tital* - ${data.title}
-┃▸┃๏ *Views* - ${data.views}
-┃▸┃๏ *Description* - ${data.description}
-┃▸┃๏ *Duration:* ${data.timestamp}}
-┃▸┃๏ *Link* - ${data.url}
-┃▸┃๏ *Ago* - ${data.ago}
-┃▸└────────────┈⊷
-╰━━━━━━━━━━━━━━━⪼
-> *© Pᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ ♡*`
-await conn.sendMessage(from,{image:{url: data.thumbnail},caption:des},{quoted:mek});
+1. Audio 
+2. Document
 
-//download video
+> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : ©𝐌𝐑 𝐃𝐈𝐍𝐄𝐒𝐇 𝐎𝐅𝐂 💚*
+        `;
 
-let down = await fg.ytv(url)  
-let downloadUrl = down.dl_url
+        const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
 
-//send video
-await conn.sendMessage(from,{video:{url: downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document:{url: downloadUrl},mimetype:"video/mp4",fileName:data.title + "mp4",caption:"©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ᴅɪɴᴇꜱʜ"},{quoted:mek})
-    
-}catch(a){
-reply(`${a}`)
-}
-})
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1':
+                        // Fetch Audio from API
+                        const audioData = await fetch(`${API}${data.url}`);
+                        const audioJson = await audioData.json();
+                        const audioDownloadUrl = audioJson.data[2].downloadUrl;  // Assuming you want 128kbps quality
+
+                        // Send Audio
+                        await conn.sendMessage(from, { 
+                            audio: { url: audioDownloadUrl }, 
+                            mimetype: "audio/mpeg", 
+                            caption: "> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : ©𝐌𝐑 𝐃𝐈𝐍𝐄𝐒𝐇 𝐎𝐅𝐂 💚*" 
+                        }, { quoted: mek });
+                        break;
+       
+                    case '2':
+                        // Fetch Audio from API
+                        const docData = await fetch(`{https://manu-ofc-api-site-6bfcbe0e18f6.herokuapp.com/ytmp3-dl-fixed?url=}`);
+                        const docJson = await docData.json();
+                        const docDownloadUrl = docJson.data[2].downloadUrl;  // Assuming you want 128kbps quality
+
+                        // Send Document
+                        await conn.sendMessage(from, { 
+                            document: { url: docDownloadUrl },
+                            mimetype: "audio/mpeg", 
+                            fileName: `${data.title}.mp3`, 
+                            caption: "> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : ©𝐌𝐑 𝐃𝐈𝐍𝐄𝐒𝐇 𝐎𝐅𝐂 💚*" 
+                        }, { quoted: mek });
+                        break;
+ 
+                    default:
+                        reply("Invalid option. Please select a valid option 💗");
+                }
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } });
+        reply('An error occurred while processing your request.');
+    }
+});
