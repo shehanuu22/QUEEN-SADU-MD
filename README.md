@@ -56,11 +56,6 @@
 <p/>
 
 
-
-<p align="center">
-<a href="https://pairl-f69c1fb8884c.herokuapp.com/"><img height= "35" title="Author" src="https://img.shields.io/badge/GET SESSION ID-2:-black?style=for-the-badge&logo=render"></a>
-<p/>
-
 [![Get Session3](https://img.shields.io/badge/Get_Session-black?style=for-the-badge&logo=html&logoColor=white)](https://bit.ly/41mQBbY)
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
