@@ -55,8 +55,12 @@
 <a href="https://tohid-md-web-pair-qr.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/GET SESSION ID-1:-black?style=for-the-badge&logo=render"></a>
 <p/>
 
+### **PAIRING CODE & QR CODE 2**
+   - Visit the bot site to generate a pairing code and get **SESSION ID.**
 
-[![Get Session3](https://img.shields.io/badge/Get_Session-black?style=for-the-badge&logo=html&logoColor=white)](https://bit.ly/41mQBbY)
+     [![MEGA AI Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://ultra-pair-e2afa02e65c6.herokuapp.com/)
+
+
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
